@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  const messages = await getMessages({ locale });
+  const messages = await getMessages();
 
   return (
     <html
@@ -67,10 +67,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${fraunces.variable} ${karla.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <ThemeScript />
-      </head>
       <body className="min-h-dvh flex flex-col antialiased">
+        <ThemeScript />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <Header />
