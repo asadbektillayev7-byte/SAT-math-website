@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Home",
+    "teachers": "Teachers",
+    "courses": "Courses"
+  },
+  "header": {
+    "logoAlt": "Asliddin Edu Centre logo"
+  },
+  "footer": {
+    "tagline": "SAT Math mentoring at Asliddin Edu Centre.",
+    "copyright": "© 2026 Davronbek Namozov."
+  },
+  "home": {
+    "heroEyebrow": "SAT MATH MENTOR · ASLIDDIN EDU CENTRE",
+    "heroHeadline": "790 out of 800. Now it's your turn.",
+    "heroSubheadline": "Davronbek Namozov teaches SAT Math the way he was tested on it — precisely, and against the clock. Offline classes at Asliddin Edu Centre, Uzbekistan.",
+    "heroCta": "Message on Telegram",
+    "heroSecondaryCta": "See courses & results",
+    "stats": {
+      "score": "790/800 — Personal SAT Math score",
+      "experience": "4 years — Teaching Math & SAT",
+      "certificate": "77.64 (A+) — National Math Certificate score"
+    },
+    "aboutTeaser": "A 790/800 personal SAT Math score and a National Math Certificate at A+ level back a teaching style built on one idea — math anxiety usually isn't about ability, it's about speed under pressure, and that's trainable.",
+    "aboutLink": "More about Davronbek →",
+    "whySatHeadline": "The SAT isn't just for admission abroad.",
+    "whySatBody": "Under a 2025 Cabinet of Ministers resolution, Uzbekistani applicants who score <link>1200 or higher</link> on the SAT qualify for university admission with an additional state grant — full tuition, for the standard four-year bachelor's program, at eligible local universities.",
+    "whySatLink": "See course details →",
+    "whySatUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
+    "courseTeaserHeading": "Course tracks",
+    "resultsHeadline": "Real scores. Real acceptances.",
+    "resultsLink": "See all results →",
+    "ctaHeadline": "Ready to see where you stand?",
+    "ctaTelegram": "Message on Telegram",
+    "ctaCourses": "View courses"
+  },
+  "teachers": {
+    "title": "Teachers — Davronbek Namozov | SAT Math Mentor",
+    "description": "Meet Davronbek Namozov — SAT Math mentor at Asliddin Edu Centre with a 790/800 personal score and A+ National Math Certificate.",
+    "name": "Davronbek Namozov",
+    "role": "SAT Math Mentor, Asliddin Edu Centre",
+    "philosophy1": "A 790/800 personal SAT Math score and a National Math Certificate at A+ level back a teaching style built on one idea — math anxiety usually isn't about ability, it's about speed under pressure, and that's trainable.",
+    "philosophy2": "Four years of teaching SAT Math has mostly been about one pattern: students who \"aren't math people\" almost always turn out to be students who never had time drilled out of the equation. Speed comes from repetition under real exam conditions, not from more theory. That's the whole method here.",
+    "credentialsHeading": "Credentials",
+    "credentialScore": "Personal SAT Math score: 790/800",
+    "credentialCertificate": "National Math Certificate: 77.64 — A+",
+    "credentialExperience": "4 years teaching Math & SAT",
+    "ebrwHeading": "Teaching the English side",
+    "ebrwDescription": "SAT EBRW and Individual English classes are taught by [[NEEDS INPUT: EBRW teacher's name — only the Telegram handle @peaceashit was given, no name on file]].",
+    "ebrwCta": "Message on Telegram"
+  },
+  "courses": {
+    "title": "Courses — SAT Math Prep | Asliddin Edu Centre",
+    "description": "SAT Math courses at Asliddin Edu Centre: SAT Advanced, Pre-SAT, Individual English (EBRW), and SAT Math for Teachers. Rolling enrollment, offline in Qarshi.",
+    "subnavCourses": "Courses",
+    "subnavResults": "Results",
+    "subnavFaq": "FAQ",
+    "subnavContact": "Contact",
+    "introHeading": "Why the SAT?",
+    "forStudentsHeading": "For Students",
+    "forStudentsBody": "Score <link>1200 or higher</link> on the SAT (75% of the maximum score) and, under Uzbekistan's Cabinet of Ministers Resolution No. 578 (2025), you qualify for admission with an additional state grant — full tuition covered for all four years of a bachelor's program at eligible local universities, alongside every door SAT scores open at universities abroad.",
+    "forStudentsUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
+    "forTeachersHeading": "For Teachers",
+    "forTeachersBody": "Uzbekistan's teacher certification system awards a <link>70% salary increase</link> to educators who score 86 or higher on the national certification exam. Strong SAT-level math skills are exactly the kind of preparation that gets teachers there.",
+    "forTeachersUrl": "https://xalqtaliminfo.uz/en/post/1294",
+    "audienceStudents": "For Students",
+    "audienceTeachers": "For Teachers",
+    "pricingHeading": "Complete SAT Prep — Math + English",
+    "pricingBody": "600,000 UZS / month, 6 days a week, covers both the Math track (SAT Advanced or Pre-SAT, whichever fits your level) and Individual English together.",
+    "pricingNote": "Looking for just one subject? Message us for pricing.",
+    "coursesHeading": "Course tracks",
+    "satAdvanced": {
+      "title": "SAT Advanced",
+      "description": "For students already comfortable with core material, aiming to push their Math score toward the top end.",
+      "duration": "3 months"
+    },
+    "preSat": {
+      "title": "Pre-SAT",
+      "description": "A foundational track for students building up core Math skills before tackling full SAT-level problems.",
+      "duration": "2.5 months"
+    },
+    "individualEnglish": {
+      "title": "Individual English (EBRW)",
+      "description": "Personalized English/EBRW preparation with [[NEEDS INPUT: EBRW teacher name]], paced to the student's starting level rather than a fixed syllabus.",
+      "duration": "Flexible, depending on starting level"
+    },
+    "teachersMath": {
+      "title": "SAT Math for Teachers",
+      "description": "A Math-only track built for teachers preparing to raise their score on the national certification exam.",
+      "duration": "~2 months, varies by starting level"
+    },
+    "resultsHeadline": "Real scores. Real acceptances.",
+    "resultsFilterMath": "Only Math",
+    "resultsFilterBoth": "EBRW & Math",
+    "resultsEmpty": "No results yet — coming soon.",
+    "faqHeading": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "Are classes online or offline?",
+        "a": "Offline only, held in person at Asliddin Edu Centre."
+      },
+      {
+        "q": "What's the weekly schedule?",
+        "a": "Monday–Friday regular lessons, with Saturday dedicated to full mock-test practice — 6 days a week across all tracks."
+      },
+      {
+        "q": "How long does each course take?",
+        "a": "SAT Advanced runs about 3 months, Pre-SAT about 2.5 months, Individual English is paced to the student's starting level, and the Teachers' Math track runs about 2 months depending on prior knowledge."
+      },
+      {
+        "q": "Can I join anytime, or only at fixed intake dates?",
+        "a": "Rolling enrollment — you can start whenever you're ready."
+      },
+      {
+        "q": "Is there a track for teachers, not just students?",
+        "a": "Yes — a dedicated Math-only course for teachers preparing for the national certification exam, which carries a 70% salary increase for high scorers. See the \"For Teachers\" tab above."
+      },
+      {
+        "q": "Why prepare specifically for the SAT, rather than just school exams?",
+        "a": "Beyond university admission abroad, a SAT score of 1200 or higher currently qualifies Uzbekistani students for an additional state grant covering full tuition for a four-year bachelor's degree at eligible local universities."
+      }
+    ],
+    "contactHeading": "Get in touch",
+    "contactTelegram": "Message on Telegram",
+    "openInMaps": "Open in Maps",
+    "locationConfirmNote": "[[NEEDS INPUT: confirm this Qarshi branch address before shipping]]"
+  }
+}

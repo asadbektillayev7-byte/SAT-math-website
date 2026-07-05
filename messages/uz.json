@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "teachers": "O'qituvchilar",
+    "courses": "Kurslar"
+  },
+  "header": {
+    "logoAlt": "Asliddin Edu Centre logotipi"
+  },
+  "footer": {
+    "tagline": "Asliddin Edu Centre'da SAT Math mentori.",
+    "copyright": "© 2026 Davronbek Namozov."
+  },
+  "home": {
+    "heroEyebrow": "SAT MATH MENTORI · ASLIDDIN EDU CENTRE",
+    "heroHeadline": "790 ball 800 dan. Endi sizning navbatingiz.",
+    "heroSubheadline": "Davronbek Namozov SAT Math'ni o'zi imtihon topshirgandek — aniq va vaqtga qarshi o'rgatadi. Asliddin Edu Centre, O'zbekiston.",
+    "heroCta": "Telegram orqali yozing",
+    "heroSecondaryCta": "Kurslar va natijalar",
+    "stats": {
+      "score": "790/800 — Shaxsiy SAT Math ko'rsatkichi",
+      "experience": "4 yil — Math va SAT o'qituvchisi",
+      "certificate": "77.64 (A+) — Milliy Matematika Sertifikati"
+    },
+    "aboutTeaser": "790/800 shaxsiy SAT Math ko'rsatkichi va A+ darajasidagi Milliy Matematika Sertifikati ortida bitta g‘oya bor — matematikadan qo‘rqish odatda qobiliyatsizlik emas, bu bosim ostida tezlik muammosi va buni mashq qildirish mumkin.",
+    "aboutLink": "Davronbek haqida batafsil →",
+    "whySatHeadline": "SAT faqat xorijda o‘qish uchun emas.",
+    "whySatBody": "2025-yilgi Vazirlar Mahkamasi qaroriga ko‘ra, SAT dan <link>1200 yoki undan yuqori</link> ball olgan O‘zbekiston abituriyentlari qo‘shimcha davlat granti asosida universitetga qabul qilinadi — to‘rt yillik bakalavriat uchun to‘liq kontrakt mahalliy oliygohlarda.",
+    "whySatLink": "Kurs tafsilotlari →",
+    "whySatUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
+    "courseTeaserHeading": "Kurs yo‘nalishlari",
+    "resultsHeadline": "Haqiqiy natijalar. Haqiqiy qabul.",
+    "resultsLink": "Barcha natijalar →",
+    "ctaHeadline": "Qayerda turganingizni bilishga tayyormisiz?",
+    "ctaTelegram": "Telegram orqali yozing",
+    "ctaCourses": "Kurslarni ko‘rish"
+  },
+  "teachers": {
+    "title": "O‘qituvchilar — Davronbek Namozov | SAT Math Mentori",
+    "description": "Davronbek Namozov bilan tanishing — Asliddin Edu Centre'da SAT Math mentori, 790/800 shaxsiy ko‘rsatkichi va A+ darajali Milliy Matematika Sertifikati egasi.",
+    "name": "Davronbek Namozov",
+    "role": "SAT Math Mentori, Asliddin Edu Centre",
+    "philosophy1": "790/800 shaxsiy SAT Math ko‘rsatkichi va A+ darajasidagi Milliy Matematika Sertifikati ortida bitta g‘oya bor — matematikadan qo‘rqish odatda qobiliyatsizlik emas, bu bosim ostida tezlik muammosi va buni mashq qildirish mumkin.",
+    "philosophy2": "SAT Math o‘qitgan to‘rt yil davomida asosan bitta naqshni ko‘rdim: \"matematik odam emas\" degan o‘quvchilar deyarli har doim tenglamadan vaqtni chiqarib olishni o‘rganmagan o‘quvchilar bo‘lib chiqadi. Tezlik — bu nazariyadan emas, real imtihon sharoitida takrorlashdan keladi. Butun metod shu.",
+    "credentialsHeading": "Sertifikatlar",
+    "credentialScore": "Shaxsiy SAT Math ko‘rsatkichi: 790/800",
+    "credentialCertificate": "Milliy Matematika Sertifikati: 77.64 — A+",
+    "credentialExperience": "4 yil Math va SAT o‘qituvchisi",
+    "ebrwHeading": "Ingliz tili yo‘nalishi",
+    "ebrwDescription": "SAT EBRW va Individual English darslarini [[NEEDS INPUT: EBRW teacher's name — only the Telegram handle @peaceashit was given, no name on file]] olib boradi.",
+    "ebrwCta": "Telegram orqali yozing"
+  },
+  "courses": {
+    "title": "Kurslar — SAT Math Tayyorlov | Asliddin Edu Centre",
+    "description": "Asliddin Edu Centre'da SAT Math kurslari: SAT Advanced, Pre-SAT, Individual English (EBRW) va o‘qituvchilar uchun SAT Math. Doimiy qabul, Qarshi shahrida.",
+    "subnavCourses": "Kurslar",
+    "subnavResults": "Natijalar",
+    "subnavFaq": "Savol-javob",
+    "subnavContact": "Aloqa",
+    "introHeading": "Nega SAT?",
+    "forStudentsHeading": "Talabalar uchun",
+    "forStudentsBody": "SAT dan <link>1200 yoki undan yuqori</link> ball oling (maksimalning 75%) va O‘zbekiston Vazirlar Mahkamasining 578-son qaroriga (2025) asosan, qo‘shimcha davlat granti bilan oliy o‘quv yurtiga qabul qilinish huquqiga ega bo‘lasiz — mahalliy universitetlarda to‘rt yillik bakalavriat uchun to‘liq kontrakt qoplanadi. SAT ballari xorijiy universitetlarda ham eshiklarni ochadi.",
+    "forStudentsUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
+    "forTeachersHeading": "O‘qituvchilar uchun",
+    "forTeachersBody": "O‘zbekiston o‘qituvchilarini attestatsiya qilish tizimi milliy imtihonda 86 va undan yuqori ball olgan pedagoglarga <link>70% ish haqi oshirilishini</link> taqdim etadi. SAT darajasidagi matematik bilimlar aynan shu natijaga erishish uchun eng kerakli tayyorlovdir.",
+    "forTeachersUrl": "https://xalqtaliminfo.uz/en/post/1294",
+    "audienceStudents": "Talabalar uchun",
+    "audienceTeachers": "O‘qituvchilar uchun",
+    "pricingHeading": "To‘liq SAT Tayyorlov — Math + English",
+    "pricingBody": "600,000 UZS / oy, haftada 6 kun, Math yo‘nalishi (SAT Advanced yoki Pre-SAT, darajangizga mosi) va Individual English ikkalasini o‘z ichiga oladi.",
+    "pricingNote": "Faqat bitta fanni xohlaysizmi? Narx uchun bizga yozing.",
+    "coursesHeading": "Kurs yo‘nalishlari",
+    "satAdvanced": {
+      "title": "SAT Advanced",
+      "description": "Asosiy materialni o‘zlashtirgan, Math ballini yuqori chegaraga ko‘tarishni maqsad qilgan o‘quvchilar uchun.",
+      "duration": "3 oy"
+    },
+    "preSat": {
+      "title": "Pre-SAT",
+      "description": "SAT darajasidagi masalalarga o‘tishdan oldin asosiy matematik ko‘nikmalarni shakllantiruvchi tayyorlov kursi.",
+      "duration": "2.5 oy"
+    },
+    "individualEnglish": {
+      "title": "Individual English (EBRW)",
+      "description": "[[NEEDS INPUT: EBRW teacher name]] bilan shaxsiy ingliz tili/EBRW tayyorlovi, o‘quvchining boshlang‘ich darajasiga moslashtirilgan.",
+      "duration": "Moslashuvchan, boshlang‘ich darajaga qarab"
+    },
+    "teachersMath": {
+      "title": "O‘qituvchilar uchun SAT Math",
+      "description": "Milliy attestatsiya imtihonida ballini oshirishga tayyorlanayotgan o‘qituvchilar uchun faqat Math-ga yo‘naltirilgan kurs.",
+      "duration": "~2 oy, boshlang‘ich darajaga qarab"
+    },
+    "resultsHeadline": "Haqiqiy natijalar. Haqiqiy qabul.",
+    "resultsFilterMath": "Faqat Math",
+    "resultsFilterBoth": "EBRW va Math",
+    "resultsEmpty": "Hozircha natijalar yo‘q — tez orada qo‘shiladi.",
+    "faqHeading": "Tez-tez so'raladigan savollar",
+    "faq": [
+      {
+        "q": "Darslar onlaynmi yoki oflaynmi?",
+        "a": "Faqat oflayn, Asliddin Edu Centre'da shaxsan qatnashish orqali."
+      },
+      {
+        "q": "Haftalik jadval qanday?",
+        "a": "Dushanba–Juma oddiy darslar, Shanba kuni to‘liq mock-test amaliyoti — barcha yo‘nalishlarda haftada 6 kun."
+      },
+      {
+        "q": "Har bir kurs qancha davom etadi?",
+        "a": "SAT Advanced taxminan 3 oy, Pre-SAT 2.5 oy, Individual English o‘quvchi darajasiga qarab belgilanadi, O‘qituvchilar Math kursi esa oldingi bilimga qarab 2 oy atrofida."
+      },
+      {
+        "q": "Faqat belgilangan vaqtda qabul bo‘ladimi yoki istalgan payt qo‘shilsa bo‘ladimi?",
+        "a": "Doimiy qabul — istalgan vaqtda boshlashingiz mumkin."
+      },
+      {
+        "q": "Faqat talabalar uchunmi yoki o‘qituvchilar uchun ham alohida yo‘nalish bormi?",
+        "a": "Ha — milliy attestatsiya imtihoniga tayyorlanayotgan o‘qituvchilar uchun faqat Math-ga mo‘ljallangan alohida kurs mavjud. Yuqori ball olganlar 70% ish haqi oshirilishiga ega bo‘lishadi. Yuqoridagi \"O‘qituvchilar uchun\" bo‘limiga qarang."
+      },
+      {
+        "q": "Nega aynan SAT ga tayyorlanish kerak, oddiy maktab imtihonlariga emas?",
+        "a": "Xorijda o‘qish imkoniyatidan tashqari, SAT dan 1200 yoki undan yuqori ball olgan O‘zbekiston talabalari mahalliy oliygohlarda to‘rt yillik bakalavriat uchun to‘liq kontraktni qoplaydigan qo‘shimcha davlat grantiga ega bo‘lishadi."
+      }
+    ],
+    "contactHeading": "Aloqa",
+    "contactTelegram": "Telegram orqali yozing",
+    "openInMaps": "Xaritada ochish",
+    "locationConfirmNote": "[[NEEDS INPUT: confirm this Qarshi branch address before shipping]]"
+  }
+}

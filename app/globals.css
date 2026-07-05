@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-gold: #FFBA28;
+  --color-rust: var(--rust);
+  --color-rust-light: var(--rust-light);
+
+  --font-heading: var(--font-fraunces);
+  --font-body: var(--font-karla);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root {
+  /* Light theme (day) — also default for SSR fallback */
+  --bg: #FBF8F2;
+  --surface: #FFFFFF;
+  --ink: #383838;
+  --rust: #C1622D;
+  --rust-light: #C1622D15;
+}
+
+[data-theme="night"] {
+  --bg: #211D1A;
+  --surface: #383838;
+  --ink: #F5F1E8;
+  --rust: #D97A46;
+  --rust-light: #D97A4615;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Graph-paper grid texture */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--ink) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ink) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Torn-paper-style divider */
+.torn-divider {
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+}
+.torn-divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 24px;
+  background: linear-gradient(
+    135deg,
+    var(--bg) 33%,
+    transparent 33%,
+    transparent 66%,
+    var(--bg) 66%
+  );
+  background-size: 24px 24px;
+  opacity: 0.15;
+}
+
+/* Hand-drawn circle accent for stats */
+.hand-circle {
+  position: relative;
+  display: inline-block;
+}
+.hand-circle svg {
+  position: absolute;
+  left: -8%;
+  top: -12%;
+  width: 116%;
+  height: 124%;
+  fill: none;
+  stroke: #FFBA28;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  opacity: 0.6;
+}
+
+/* Cursor pointer for result cards */
+.result-card {
+  cursor: pointer;
+}
+.result-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Sticky subnav for courses page */
+.sticky-subnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
