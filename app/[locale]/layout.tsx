@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Fraunces, Karla, IBM_Plex_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
-import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import "../globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ThemeProvider from "@/components/theme-provider";
 import ThemeScript from "@/components/theme-script";
+import enMessages from "@/messages/en.json";
+import uzMessages from "@/messages/uz.json";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -27,6 +28,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 const locales = ["en", "uz"];
+const allMessages = { en: enMessages, uz: uzMessages };
 
 type Props = {
   children: React.ReactNode;
@@ -40,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "home" });
 
   return {
-    title: "Davronbek Namozov — SAT Math Mentor | Asliddin Edu Centre",
+    title: t("heroSubheadline"),
     description: t("heroSubheadline"),
     openGraph: {
       title: "Davronbek Namozov — SAT Math Mentor",
@@ -58,8 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-
-  const messages = await getMessages();
+  const messages = allMessages[locale as keyof typeof allMessages] ?? allMessages.en;
 
   return (
     <html
@@ -69,7 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="min-h-dvh flex flex-col antialiased">
         <ThemeScript />
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <Header />
             <main className="flex-1">{children}</main>
