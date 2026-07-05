@@ -1,4 +1,5 @@
 import createMiddleware from "next-intl/middleware";
+import type { NextRequest } from "next/server";
 
 const handler = createMiddleware({
   locales: ["en", "uz"],
@@ -6,7 +7,7 @@ const handler = createMiddleware({
   localeDetection: false,
 });
 
-export function proxy(request: Request) {
+export function proxy(request: NextRequest) {
   return handler(request);
 }
 
