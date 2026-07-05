@@ -1,32 +1,19 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const locales = ["en", "uz"];
 const defaultLocale = "en";
-
-function getLocale(pathname: string): string | null {
-  const segments = pathname.split("/");
-  const first = segments[1];
-  if (locales.includes(first)) return first;
-  return null;
-}
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const locale = getLocale(pathname);
+  const segments = pathname.split("/");
+  const first = segments[1];
 
-  if (!locale) {
-    const newUrl = new URL(request.nextUrl);
-    newUrl.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
-    return NextResponse.redirect(newUrl);
+  if (first !== "en" && first !== "uz") {
+    const url = new URL(`/en${pathname === "/" ? "" : pathname}`, request.url);
+    return NextResponse.redirect(url);
   }
 
-  const response = NextResponse.next();
-  response.cookies.set("NEXT_LOCALE", locale, {
-    path: "/",
-    sameSite: "lax",
-  });
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
