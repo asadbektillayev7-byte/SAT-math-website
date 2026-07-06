@@ -1,11 +1,11 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslation, useLocale } from "@/components/i18n-provider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const t = useTranslations("nav");
+  const { t } = useTranslation();
   const locale = useLocale();
   const pathname = usePathname();
 
@@ -14,10 +14,6 @@ export default function Header() {
     segments[1] = next;
     return segments.join("/");
   }
-
-  const isDark =
-    typeof document !== "undefined" &&
-    document.documentElement.dataset.theme === "night";
 
   return (
     <header className="sticky top-0 z-30 bg-bg/85 backdrop-blur-sm border-b border-ink/5">
@@ -37,19 +33,19 @@ export default function Header() {
             href={`/${locale}`}
             className="font-body text-sm text-ink/70 hover:text-ink transition-colors"
           >
-            {t("home")}
+            {t("nav.home")}
           </Link>
           <Link
             href={`/${locale}/teachers`}
             className="font-body text-sm text-ink/70 hover:text-ink transition-colors"
           >
-            {t("teachers")}
+            {t("nav.teachers")}
           </Link>
           <Link
             href={`/${locale}/courses`}
             className="font-body text-sm text-ink/70 hover:text-ink transition-colors"
           >
-            {t("courses")}
+            {t("nav.courses")}
           </Link>
 
           <div className="flex items-center gap-1 ml-4 pl-4 border-l border-ink/10">

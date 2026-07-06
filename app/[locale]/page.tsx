@@ -1,17 +1,27 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Send } from "lucide-react";
 import HandDrawnStat from "@/components/hand-drawn-stat";
 import HeroPortrait from "@/components/hero-portrait";
 import StudentResults from "@/components/student-results";
+import { getTranslation, getRawMessage } from "@/lib/translations";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: "Davronbek Namozov — SAT Math Mentor | Asliddin Edu Centre",
+    description: getTranslation(locale, "home.heroSubheadline"),
+  };
+}
+
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
+  const t = (key: string) => getTranslation(locale, key);
+  const raw = (key: string) => getRawMessage(locale, key);
 
   return (
     <>
@@ -21,13 +31,13 @@ export default async function HomePage({ params }: Props) {
           <div className="grid gap-12 md:grid-cols-5 items-center">
             <div className="md:col-span-3">
               <p className="font-mono text-xs tracking-[0.2em] uppercase text-rust mb-4">
-                {t("heroEyebrow")}
+                {t("home.heroEyebrow")}
               </p>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold text-ink mb-6">
-                {t("heroHeadline")}
+                {t("home.heroHeadline")}
               </h1>
               <p className="font-body text-lg text-ink/60 leading-relaxed mb-8 max-w-xl">
-                {t("heroSubheadline")}
+                {t("home.heroSubheadline")}
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -37,13 +47,13 @@ export default async function HomePage({ params }: Props) {
                   className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"
                 >
                   <Send size={16} />
-                  {t("heroCta")}
+                  {t("home.heroCta")}
                 </a>
                 <Link
                   href={`/${locale}/courses`}
                   className="font-body text-sm text-ink/50 hover:text-ink underline underline-offset-4 transition-colors"
                 >
-                  {t("heroSecondaryCta")}
+                  {t("home.heroSecondaryCta")}
                 </Link>
               </div>
             </div>
@@ -60,17 +70,17 @@ export default async function HomePage({ params }: Props) {
           <div className="grid gap-8 sm:grid-cols-3">
             <HandDrawnStat className="text-center">
               <p className="font-heading text-3xl font-semibold text-ink mb-1">
-                {t("stats.score")}
+                {t("home.stats.score")}
               </p>
             </HandDrawnStat>
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-ink mb-1">
-                {t("stats.experience")}
+                {t("home.stats.experience")}
               </p>
             </div>
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-ink mb-1">
-                {t("stats.certificate")}
+                {t("home.stats.certificate")}
               </p>
             </div>
           </div>
@@ -81,13 +91,13 @@ export default async function HomePage({ params }: Props) {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="max-w-2xl">
           <p className="font-body text-lg text-ink/70 leading-relaxed mb-6">
-            {t("aboutTeaser")}
+            {t("home.aboutTeaser")}
           </p>
           <Link
             href={`/${locale}/teachers`}
             className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
           >
-            {t("aboutLink")}
+            {t("home.aboutLink")}
           </Link>
         </div>
       </section>
@@ -98,16 +108,16 @@ export default async function HomePage({ params }: Props) {
       {/* Why SAT */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="font-heading text-3xl font-semibold text-ink mb-4">
-          {t("whySatHeadline")}
+          {t("home.whySatHeadline")}
         </h2>
         <p className="font-body text-lg text-ink/70 leading-relaxed max-w-2xl mb-6">
-          {t.raw("whySatBody")}
+          {t("home.whySatBody")}
         </p>
         <Link
           href={`/${locale}/courses`}
           className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
         >
-          {t("whySatLink")}
+          {t("home.whySatLink")}
         </Link>
       </section>
 
@@ -115,7 +125,7 @@ export default async function HomePage({ params }: Props) {
       <section className="bg-surface border-y border-ink/5">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
-            {t("courseTeaserHeading")}
+            {t("home.courseTeaserHeading")}
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             <Link
@@ -158,7 +168,7 @@ export default async function HomePage({ params }: Props) {
       {/* Results teaser */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
-          {t("resultsHeadline")}
+          {t("home.resultsHeadline")}
         </h2>
         <StudentResults />
         <div className="mt-8">
@@ -166,7 +176,7 @@ export default async function HomePage({ params }: Props) {
             href={`/${locale}/courses#results`}
             className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
           >
-            {t("resultsLink")}
+            {t("home.resultsLink")}
           </Link>
         </div>
       </section>
@@ -175,7 +185,7 @@ export default async function HomePage({ params }: Props) {
       <section className="bg-ink text-bg py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-8">
-            {t("ctaHeadline")}
+            {t("home.ctaHeadline")}
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -185,13 +195,13 @@ export default async function HomePage({ params }: Props) {
               className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"
             >
               <Send size={16} />
-              {t("ctaTelegram")}
+              {t("home.ctaTelegram")}
             </a>
             <Link
               href={`/${locale}/courses`}
               className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg border border-current text-bg hover:text-gold transition-colors"
             >
-              {t("ctaCourses")}
+              {t("home.ctaCourses")}
             </Link>
           </div>
         </div>

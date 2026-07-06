@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Fraunces, Karla, IBM_Plex_Mono } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getTranslations } from "next-intl/server";
 import "../globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ThemeProvider from "@/components/theme-provider";
 import ThemeScript from "@/components/theme-script";
+import I18nProvider from "@/components/i18n-provider";
 import enMessages from "@/messages/en.json";
 import uzMessages from "@/messages/uz.json";
 
@@ -27,40 +26,14 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
-const locales = ["en", "uz"];
-const allMessages = { en: enMessages, uz: uzMessages };
-
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
 
-export const dynamic = "force-dynamic";
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
-
-  return {
-    title: t("heroSubheadline"),
-    description: t("heroSubheadline"),
-    openGraph: {
-      title: "Davronbek Namozov — SAT Math Mentor",
-      description: t("heroSubheadline"),
-      locale: locale === "uz" ? "uz_UZ" : "en_US",
-    },
-    alternates: {
-      languages: {
-        en: "/en",
-        uz: "/uz",
-      },
-    },
-  };
-}
-
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-  const messages = allMessages[locale as keyof typeof allMessages] ?? allMessages.en;
+  const messages: Record<string, unknown> = locale === "uz" ? (uzMessages as Record<string, unknown>) : (enMessages as Record<string, unknown>);
 
   return (
     <html
@@ -70,13 +43,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="min-h-dvh flex flex-col antialiased">
         <ThemeScript />
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <I18nProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
           </ThemeProvider>
-        </NextIntlClientProvider>
+        </I18nProvider>
       </body>
     </html>
   );

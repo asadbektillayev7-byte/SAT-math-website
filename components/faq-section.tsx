@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "@/components/i18n-provider";
 import { ChevronDown } from "lucide-react";
 
 export default function FaqSection() {
-  const t = useTranslations("courses");
-  const faq = t.raw("faq") as { q: string; a: string }[];
+  const { t, raw } = useTranslation();
+  const faq = raw("courses.faq") as { q: string; a: string }[];
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  if (!Array.isArray(faq)) return null;
 
   return (
     <div className="space-y-3">

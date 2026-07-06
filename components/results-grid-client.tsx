@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "@/components/i18n-provider";
 import Image from "next/image";
 import type { StudentResult } from "@/lib/sheets";
 
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function ResultsGridClient({ results }: Props) {
-  const t = useTranslations("courses");
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<"all" | "math" | "ebrw_math">("all");
 
   const filtered =
@@ -39,7 +39,7 @@ export default function ResultsGridClient({ results }: Props) {
               : "border-ink/20 text-ink/60 hover:border-ink/40"
           }`}
         >
-          {t("resultsFilterMath")}
+          {t("courses.resultsFilterMath")}
         </button>
         <button
           onClick={() => setFilter("ebrw_math")}
@@ -49,12 +49,12 @@ export default function ResultsGridClient({ results }: Props) {
               : "border-ink/20 text-ink/60 hover:border-ink/40"
           }`}
         >
-          {t("resultsFilterBoth")}
+          {t("courses.resultsFilterBoth")}
         </button>
       </div>
 
       {filtered.length === 0 ? (
-        <p className="font-body text-sm text-ink/40 italic">{t("resultsEmpty")}</p>
+        <p className="font-body text-sm text-ink/40 italic">{t("courses.resultsEmpty")}</p>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((r, i) => (

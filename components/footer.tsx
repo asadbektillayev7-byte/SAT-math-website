@@ -1,13 +1,12 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
+import { useTranslation, useLocale } from "@/components/i18n-provider";
 import Link from "next/link";
 import { Send, Phone, MapPin } from "lucide-react";
 import { contacts } from "@/data/contacts";
 
 export default function Footer() {
-  const t = useTranslations("footer");
+  const { t } = useTranslation();
   const locale = useLocale();
 
   return (
@@ -23,7 +22,7 @@ export default function Footer() {
                 AE
               </span>
             </Link>
-            <p className="font-body text-sm text-ink/60">{t("tagline")}</p>
+            <p className="font-body text-sm text-ink/60">{t("footer.tagline")}</p>
           </div>
 
           <div>
@@ -66,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-ink/5 text-center font-mono text-xs tracking-wider text-ink/40">
-          {t("copyright")}
+          {t("footer.copyright")}
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
-import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import CoursesContent from "./courses-content";
 import { fetchStudentResults } from "@/lib/sheets";
+import { getTranslation, getRawMessage } from "@/lib/translations";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -9,66 +9,59 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "courses" });
   return {
-    title: t("title"),
-    description: t("description"),
+    title: getTranslation(locale, "courses.title"),
+    description: getTranslation(locale, "courses.description"),
   };
 }
 
 export default async function CoursesPage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "courses" });
-
   const results = await fetchStudentResults();
 
+  const t = (key: string) => getTranslation(locale, key);
+  const raw = (key: string) => getRawMessage(locale, key);
+
   const messages = {
-    subnavCourses: t("subnavCourses"),
-    subnavResults: t("subnavResults"),
-    subnavFaq: t("subnavFaq"),
-    subnavContact: t("subnavContact"),
-    introHeading: t("introHeading"),
-    forStudentsHeading: t("forStudentsHeading"),
-    forStudentsBody: t.raw("forStudentsBody") as string,
-    forStudentsUrl: t("forStudentsUrl"),
-    forTeachersHeading: t("forTeachersHeading"),
-    forTeachersBody: t.raw("forTeachersBody") as string,
-    forTeachersUrl: t("forTeachersUrl"),
-    audienceStudents: t("audienceStudents"),
-    audienceTeachers: t("audienceTeachers"),
-    pricingHeading: t("pricingHeading"),
-    pricingBody: t("pricingBody"),
-    pricingNote: t("pricingNote"),
-    coursesHeading: t("coursesHeading"),
-    satAdvancedTitle: t("satAdvanced.title"),
-    satAdvancedDesc: t("satAdvanced.description"),
-    satAdvancedDuration: t("satAdvanced.duration"),
-    preSatTitle: t("preSat.title"),
-    preSatDesc: t("preSat.description"),
-    preSatDuration: t("preSat.duration"),
-    individualEnglishTitle: t("individualEnglish.title"),
-    individualEnglishDesc: t("individualEnglish.description"),
-    individualEnglishDuration: t("individualEnglish.duration"),
-    teachersMathTitle: t("teachersMath.title"),
-    teachersMathDesc: t("teachersMath.description"),
-    teachersMathDuration: t("teachersMath.duration"),
-    resultsHeadline: t("resultsHeadline"),
-    resultsEmpty: t("resultsEmpty"),
-    resultsFilterMath: t("resultsFilterMath"),
-    resultsFilterBoth: t("resultsFilterBoth"),
-    faqHeading: t("faqHeading"),
-    contactHeading: t("contactHeading"),
-    contactTelegram: t("contactTelegram"),
-    locationConfirmNote: t("locationConfirmNote"),
-    openInMaps: t("openInMaps"),
-    faq: JSON.stringify(t.raw("faq")),
+    subnavCourses: t("courses.subnavCourses"),
+    subnavResults: t("courses.subnavResults"),
+    subnavFaq: t("courses.subnavFaq"),
+    subnavContact: t("courses.subnavContact"),
+    introHeading: t("courses.introHeading"),
+    forStudentsHeading: t("courses.forStudentsHeading"),
+    forStudentsBody: raw("courses.forStudentsBody") as string,
+    forStudentsUrl: t("courses.forStudentsUrl"),
+    forTeachersHeading: t("courses.forTeachersHeading"),
+    forTeachersBody: raw("courses.forTeachersBody") as string,
+    forTeachersUrl: t("courses.forTeachersUrl"),
+    audienceStudents: t("courses.audienceStudents"),
+    audienceTeachers: t("courses.audienceTeachers"),
+    pricingHeading: t("courses.pricingHeading"),
+    pricingBody: t("courses.pricingBody"),
+    pricingNote: t("courses.pricingNote"),
+    coursesHeading: t("courses.coursesHeading"),
+    satAdvancedTitle: t("courses.satAdvanced.title"),
+    satAdvancedDesc: t("courses.satAdvanced.description"),
+    satAdvancedDuration: t("courses.satAdvanced.duration"),
+    preSatTitle: t("courses.preSat.title"),
+    preSatDesc: t("courses.preSat.description"),
+    preSatDuration: t("courses.preSat.duration"),
+    individualEnglishTitle: t("courses.individualEnglish.title"),
+    individualEnglishDesc: t("courses.individualEnglish.description"),
+    individualEnglishDuration: t("courses.individualEnglish.duration"),
+    teachersMathTitle: t("courses.teachersMath.title"),
+    teachersMathDesc: t("courses.teachersMath.description"),
+    teachersMathDuration: t("courses.teachersMath.duration"),
+    resultsHeadline: t("courses.resultsHeadline"),
+    resultsEmpty: t("courses.resultsEmpty"),
+    resultsFilterMath: t("courses.resultsFilterMath"),
+    resultsFilterBoth: t("courses.resultsFilterBoth"),
+    faqHeading: t("courses.faqHeading"),
+    contactHeading: t("courses.contactHeading"),
+    contactTelegram: t("courses.contactTelegram"),
+    locationConfirmNote: t("courses.locationConfirmNote"),
+    openInMaps: t("courses.openInMaps"),
   };
 
-  return (
-    <CoursesContent
-      locale={locale}
-      messages={messages}
-      results={results}
-    />
-  );
+  return <CoursesContent locale={locale} messages={messages} results={results} />;
 }
