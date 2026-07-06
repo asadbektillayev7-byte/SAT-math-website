@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import CoursesContent from "./courses-content";
-import { fetchStudentResults } from "@/lib/sheets";
 import { getTranslation, getRawMessage } from "@/lib/translations";
 
 type Props = {
@@ -17,14 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CoursesPage({ params }: Props) {
   const { locale } = await params;
-  const results = await fetchStudentResults();
-
   const t = (key: string) => getTranslation(locale, key);
   const raw = (key: string) => getRawMessage(locale, key);
 
   const messages = {
     subnavCourses: t("courses.subnavCourses"),
-    subnavResults: t("courses.subnavResults"),
     subnavFaq: t("courses.subnavFaq"),
     subnavContact: t("courses.subnavContact"),
     introHeading: t("courses.introHeading"),
@@ -52,10 +48,6 @@ export default async function CoursesPage({ params }: Props) {
     teachersMathTitle: t("courses.teachersMath.title"),
     teachersMathDesc: t("courses.teachersMath.description"),
     teachersMathDuration: t("courses.teachersMath.duration"),
-    resultsHeadline: t("courses.resultsHeadline"),
-    resultsEmpty: t("courses.resultsEmpty"),
-    resultsFilterMath: t("courses.resultsFilterMath"),
-    resultsFilterBoth: t("courses.resultsFilterBoth"),
     faqHeading: t("courses.faqHeading"),
     contactHeading: t("courses.contactHeading"),
     contactTelegram: t("courses.contactTelegram"),
@@ -63,5 +55,5 @@ export default async function CoursesPage({ params }: Props) {
     openInMaps: t("courses.openInMaps"),
   };
 
-  return <CoursesContent locale={locale} messages={messages} results={results} />;
+  return <CoursesContent locale={locale} messages={messages} />;
 }

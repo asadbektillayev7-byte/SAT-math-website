@@ -173,7 +173,7 @@ export default async function HomePage({ params }: Props) {
         <StudentResults />
         <div className="mt-8">
           <Link
-            href={`/${locale}/courses#results`}
+            href={`/${locale}/results`}
             className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
           >
             {t("home.resultsLink")}

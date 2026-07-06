@@ -6,9 +6,9 @@ export const contacts = {
     phone: "+998940212555",
     phoneDisplay: "+998 94 021 25 55",
   },
-  ebrwTeacher: {
-    name: "[[NEEDS INPUT: EBRW teacher name]]",
-    title: "Individual English (EBRW)",
+  aslan: {
+    name: "Aslan Saidov",
+    title: "EBRW & Individual English Teacher",
     telegram: "https://t.me/peaceashit",
     phone: null,
   },

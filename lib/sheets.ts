@@ -23,8 +23,8 @@ export async function fetchStudentResults(): Promise<StudentResult[]> {
   try {
     const res = await fetch(CSV_URL, { next: { revalidate: 300 } });
     const csvText = await res.text();
-    const parsed = Papa.parse<Record<string, string>>(csvText, {
-      header: true,
+    const parsed = Papa.parse<string[]>(csvText, {
+      header: false,
       skipEmptyLines: true,
     });
 
@@ -34,11 +34,11 @@ export async function fetchStudentResults(): Promise<StudentResult[]> {
 
     return parsed.data
       .map((row) => ({
-        name: row.name || "",
-        photo: normalizeDriveUrl(row.photo || ""),
-        category: (row.category === "ebrw_math" ? "ebrw_math" : "math") as StudentResult["category"],
-        score: row.score || "",
-        telegram_post: row.telegram_post || "",
+        name: row[0]?.trim() || "",
+        photo: normalizeDriveUrl(row[1]?.trim() || ""),
+        category: (row[2]?.trim() === "ebrw_math" ? "ebrw_math" : "math") as StudentResult["category"],
+        score: (row[3]?.trim() || "").replace(/\/\d+$/, "") + "/1600",
+        telegram_post: row[4]?.trim() || "",
       }))
       .filter((r) => r.name && r.score);
   } catch {

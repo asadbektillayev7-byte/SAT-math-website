@@ -47,6 +47,12 @@ export default function Header() {
           >
             {t("nav.courses")}
           </Link>
+          <Link
+            href={`/${locale}/results`}
+            className="font-body text-sm text-ink/70 hover:text-ink transition-colors"
+          >
+            {t("nav.results")}
+          </Link>
 
           <div className="flex items-center gap-1 ml-4 pl-4 border-l border-ink/10">
             <Link

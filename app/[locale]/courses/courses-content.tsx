@@ -4,18 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { Send, MapPin } from "lucide-react";
 import AudienceToggle from "@/components/audience-toggle";
-import ResultsGridClient from "@/components/results-grid-client";
 import FaqSection from "@/components/faq-section";
 import { contacts } from "@/data/contacts";
-import type { StudentResult } from "@/lib/sheets";
 
 type Props = {
   locale: string;
   messages: Record<string, string>;
-  results: StudentResult[];
 };
 
-export default function CoursesContent({ locale, messages, results }: Props) {
+export default function CoursesContent({ locale, messages }: Props) {
   const [audience, setAudience] = useState<"students" | "teachers">("students");
 
   return (
@@ -25,7 +22,6 @@ export default function CoursesContent({ locale, messages, results }: Props) {
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center gap-6 overflow-x-auto">
           {[
             { id: "courses-intro", label: messages.subnavCourses },
-            { id: "results", label: messages.subnavResults },
             { id: "faq", label: messages.subnavFaq },
             { id: "contact", label: messages.subnavContact },
           ].map((item) => (
@@ -115,7 +111,7 @@ export default function CoursesContent({ locale, messages, results }: Props) {
                 </p>
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
                   <p>Duration: {messages.satAdvancedDuration}</p>
-                  <p>Group size: [[NEEDS INPUT: group size]]</p>
+                  <p>Group size: 15</p>
                   <p>Mon–Fri + Sat mock tests</p>
                 </div>
               </div>
@@ -135,7 +131,7 @@ export default function CoursesContent({ locale, messages, results }: Props) {
                 </p>
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
                   <p>Duration: {messages.preSatDuration}</p>
-                  <p>Group size: [[NEEDS INPUT: group size]]</p>
+                  <p>Group size: 15</p>
                   <p>Mon–Fri + Sat mock tests</p>
                 </div>
               </div>
@@ -191,35 +187,12 @@ export default function CoursesContent({ locale, messages, results }: Props) {
               <p>Duration: {messages.teachersMathDuration}</p>
               <p>Mon–Fri regular lessons + Saturday mock-test practice, 6 days/week</p>
               <p>Session: 2–2.5 hours</p>
-              <p>Group size: [[NEEDS INPUT: group size]]</p>
+              <p>Group size: 10</p>
               <p className="text-gold font-semibold">350,000 UZS / month</p>
             </div>
           </div>
         )}
       </section>
-
-      {/* Torn divider */}
-      <div className="torn-divider" />
-
-      {/* Student Results */}
-      <section id="results" className="py-20 relative">
-        <div className="absolute inset-0 bg-grid" />
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
-            {messages.resultsHeadline}
-          </h2>
-          {results.length === 0 ? (
-            <p className="font-body text-sm text-ink/40 italic">
-              {messages.resultsEmpty}
-            </p>
-          ) : (
-            <ResultsGridClient results={results} />
-          )}
-        </div>
-      </section>
-
-      {/* Torn divider */}
-      <div className="torn-divider" />
 
       {/* FAQ */}
       <section id="faq" className="max-w-6xl mx-auto px-6 py-20">
@@ -280,13 +253,13 @@ function ContactSectionContent({ messages }: { messages: Record<string, string> 
 
         <div className="bg-surface rounded-xl border border-ink/5 p-6">
           <h3 className="font-heading text-lg font-semibold text-ink mb-1">
-            {contacts.ebrwTeacher.name}
+            {contacts.aslan.name}
           </h3>
           <p className="font-body text-sm text-ink/50 mb-4">
-            {contacts.ebrwTeacher.title}
+            {contacts.aslan.title}
           </p>
           <a
-            href={contacts.ebrwTeacher.telegram}
+            href={contacts.aslan.telegram}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-5 py-2.5 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"

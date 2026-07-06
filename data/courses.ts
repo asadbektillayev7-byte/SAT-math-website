@@ -24,7 +24,7 @@ export const courses: Course[] = [
     descriptionKey: "courses.satAdvanced.description",
     duration: "courses.satAdvanced.duration",
     sessionLength: "2–2.5 hours",
-    groupSize: "[[NEEDS INPUT: group size]]",
+    groupSize: "15",
   },
   {
     id: "pre-sat",
@@ -34,7 +34,7 @@ export const courses: Course[] = [
     descriptionKey: "courses.preSat.description",
     duration: "courses.preSat.duration",
     sessionLength: "2–2.5 hours",
-    groupSize: "[[NEEDS INPUT: group size]]",
+    groupSize: "15",
   },
   {
     id: "individual-english",
@@ -55,7 +55,7 @@ export const courses: Course[] = [
     duration: "courses.teachersMath.duration",
     schedule: "Mon–Fri regular lessons + Saturday mock-test practice, 6 days/week",
     sessionLength: "2–2.5 hours",
-    groupSize: "[[NEEDS INPUT: group size]]",
+    groupSize: "10",
     price: "350,000 UZS / month",
   },
 ];

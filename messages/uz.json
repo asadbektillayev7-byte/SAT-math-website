@@ -2,7 +2,8 @@
   "nav": {
     "home": "Bosh sahifa",
     "teachers": "O'qituvchilar",
-    "courses": "Kurslar"
+    "courses": "Kurslar",
+    "results": "Natijalar"
   },
   "header": {
     "logoAlt": "Asliddin Edu Centre logotipi"
@@ -25,7 +26,7 @@
     "aboutTeaser": "790/800 shaxsiy SAT Math ko'rsatkichi va A+ darajasidagi Milliy Matematika Sertifikati ortida bitta g‘oya bor — matematikadan qo‘rqish odatda qobiliyatsizlik emas, bu bosim ostida tezlik muammosi va buni mashq qildirish mumkin.",
     "aboutLink": "Davronbek haqida batafsil →",
     "whySatHeadline": "SAT faqat xorijda o‘qish uchun emas.",
-    "whySatBody": "2025-yilgi Vazirlar Mahkamasi qaroriga ko‘ra, SAT dan <link>1200 yoki undan yuqori</link> ball olgan O‘zbekiston abituriyentlari qo‘shimcha davlat granti asosida universitetga qabul qilinadi — to‘rt yillik bakalavriat uchun to‘liq kontrakt mahalliy oliygohlarda.",
+    "whySatBody": "2025-yilgi Vazirlar Mahkamasi qaroriga ko‘ra, SAT dan <link>1200 yoki undan yuqori</link> ball olgan O‘zbekiston abituriyentlari qo‘shimcha davlat granti asosida universitetga qabul qilinadi — to‘rt yillik bakalavriat uchun to‘liq grant mahalliy oliygohlarda.",
     "whySatLink": "Kurs tafsilotlari →",
     "whySatUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
     "courseTeaserHeading": "Kurs yo‘nalishlari",
@@ -47,7 +48,7 @@
     "credentialCertificate": "Milliy Matematika Sertifikati: 77.64 — A+",
     "credentialExperience": "4 yil Math va SAT o‘qituvchisi",
     "ebrwHeading": "Ingliz tili yo‘nalishi",
-    "ebrwDescription": "SAT EBRW va Individual English darslarini [[NEEDS INPUT: EBRW teacher's name — only the Telegram handle @peaceashit was given, no name on file]] olib boradi.",
+    "ebrwDescription": "SAT EBRW va Individual English darslarini Aslan Saidov olib boradi.",
     "ebrwCta": "Telegram orqali yozing"
   },
   "courses": {
@@ -59,7 +60,7 @@
     "subnavContact": "Aloqa",
     "introHeading": "Nega SAT?",
     "forStudentsHeading": "Talabalar uchun",
-    "forStudentsBody": "SAT dan <link>1200 yoki undan yuqori</link> ball oling (maksimalning 75%) va O‘zbekiston Vazirlar Mahkamasining 578-son qaroriga (2025) asosan, qo‘shimcha davlat granti bilan oliy o‘quv yurtiga qabul qilinish huquqiga ega bo‘lasiz — mahalliy universitetlarda to‘rt yillik bakalavriat uchun to‘liq kontrakt qoplanadi. SAT ballari xorijiy universitetlarda ham eshiklarni ochadi.",
+    "forStudentsBody": "SAT dan <link>1200 yoki undan yuqori</link> ball oling (maksimalning 75%) va O‘zbekiston Vazirlar Mahkamasining 578-son qaroriga (2025) asosan, qo‘shimcha davlat granti bilan oliy o‘quv yurtiga qabul qilinish huquqiga ega bo‘lasiz — mahalliy universitetlarda to‘rt yillik bakalavriat uchun to‘liq grant qoplanadi. SAT ballari xorijiy universitetlarda ham eshiklarni ochadi.",
     "forStudentsUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
     "forTeachersHeading": "O‘qituvchilar uchun",
     "forTeachersBody": "O‘zbekiston o‘qituvchilarini attestatsiya qilish tizimi milliy imtihonda 86 va undan yuqori ball olgan pedagoglarga <link>70% ish haqi oshirilishini</link> taqdim etadi. SAT darajasidagi matematik bilimlar aynan shu natijaga erishish uchun eng kerakli tayyorlovdir.",
@@ -82,7 +83,7 @@
     },
     "individualEnglish": {
       "title": "Individual English (EBRW)",
-      "description": "[[NEEDS INPUT: EBRW teacher name]] bilan shaxsiy ingliz tili/EBRW tayyorlovi, o‘quvchining boshlang‘ich darajasiga moslashtirilgan.",
+      "description": "Aslan Saidov bilan shaxsiy ingliz tili/EBRW tayyorlovi, o‘quvchining boshlang‘ich darajasiga moslashtirilgan.",
       "duration": "Moslashuvchan, boshlang‘ich darajaga qarab"
     },
     "teachersMath": {
@@ -118,7 +119,7 @@
       },
       {
         "q": "Nega aynan SAT ga tayyorlanish kerak, oddiy maktab imtihonlariga emas?",
-        "a": "Xorijda o‘qish imkoniyatidan tashqari, SAT dan 1200 yoki undan yuqori ball olgan O‘zbekiston talabalari mahalliy oliygohlarda to‘rt yillik bakalavriat uchun to‘liq kontraktni qoplaydigan qo‘shimcha davlat grantiga ega bo‘lishadi."
+        "a": "Xorijda o‘qish imkoniyatidan tashqari, SAT dan 1200 yoki undan yuqori ball olgan O‘zbekiston talabalari mahalliy oliygohlarda to‘rt yillik bakalavriat uchun to‘liq grantni qoplaydigan qo‘shimcha davlat grantiga ega bo‘lishadi."
       }
     ],
     "contactHeading": "Aloqa",

@@ -92,8 +92,8 @@ export default async function TeachersPage({ params }: Props) {
             <p className="font-mono text-xs tracking-[0.2em] uppercase text-rust mb-3">
               {t("teachers.ebrwHeading")}
             </p>
-            <p className="font-body text-sm text-ink/60 leading-relaxed mb-4">
-              {t("teachers.ebrwDescription")}
+            <p className="font-body text-sm text-ink/60 leading-relaxed mb-6">
+              Aslan Saidov — SAT EBRW va Individual English darslarini olib boradi.
             </p>
             <a
               href="https://t.me/peaceashit"
@@ -105,6 +105,35 @@ export default async function TeachersPage({ params }: Props) {
               {t("teachers.ebrwCta")}
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-xl">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase text-rust mb-3">
+            TEACHING THE ENGLISH SIDE
+          </p>
+          <h2 className="font-heading text-2xl font-semibold text-ink mb-2">
+            Aslan Saidov
+          </h2>
+          <p className="font-body text-sm text-ink/60 leading-relaxed mb-4">
+            EBRW & Individual English Teacher — Asliddin Edu Centre
+          </p>
+          <p className="font-body text-base text-ink/70 leading-relaxed mb-6">
+            Aslan Saidov SAT EBRW va Individual English yo'nalishlarida
+            o'quvchilarga individual yondashuv asosida dars beradi.
+            Ingliz tili va o'qish-ko'nikma qismlarida natijaga
+            erishish uchun kerakli strategiyalarni o'rgatadi.
+          </p>
+          <a
+            href="https://t.me/peaceashit"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-5 py-2.5 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"
+          >
+            <Send size={14} />
+            {t("teachers.ebrwCta")}
+          </a>
         </div>
       </section>
     </>

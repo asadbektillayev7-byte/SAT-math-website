@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "teachers": "Teachers",
-    "courses": "Courses"
+    "courses": "Courses",
+    "results": "Results"
   },
   "header": {
     "logoAlt": "Asliddin Edu Centre logo"
@@ -47,7 +48,7 @@
     "credentialCertificate": "National Math Certificate: 77.64 — A+",
     "credentialExperience": "4 years teaching Math & SAT",
     "ebrwHeading": "Teaching the English side",
-    "ebrwDescription": "SAT EBRW and Individual English classes are taught by [[NEEDS INPUT: EBRW teacher's name — only the Telegram handle @peaceashit was given, no name on file]].",
+    "ebrwDescription": "SAT EBRW and Individual English classes are taught by Aslan Saidov.",
     "ebrwCta": "Message on Telegram"
   },
   "courses": {
@@ -82,7 +83,7 @@
     },
     "individualEnglish": {
       "title": "Individual English (EBRW)",
-      "description": "Personalized English/EBRW preparation with [[NEEDS INPUT: EBRW teacher name]], paced to the student's starting level rather than a fixed syllabus.",
+      "description": "Personalized English/EBRW preparation with Aslan Saidov, paced to the student's starting level rather than a fixed syllabus.",
       "duration": "Flexible, depending on starting level"
     },
     "teachersMath": {
