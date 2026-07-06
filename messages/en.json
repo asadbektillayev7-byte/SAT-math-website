@@ -30,7 +30,7 @@
     "whySatLink": "See course details →",
     "whySatUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
     "courseTeaserHeading": "Course tracks",
-    "resultsHeadline": "Real scores. Real acceptances.",
+    "resultsHeadline": "Student Results",
     "resultsLink": "See all results →",
     "ctaHeadline": "Ready to see where you stand?",
     "ctaTelegram": "Message on Telegram",
@@ -49,7 +49,10 @@
     "credentialExperience": "4 years teaching Math & SAT",
     "ebrwHeading": "Teaching the English side",
     "ebrwDescription": "SAT EBRW and Individual English classes are taught by Aslan Saidov.",
-    "ebrwCta": "Message on Telegram"
+    "ebrwCta": "Message on Telegram",
+    "aslanName": "Aslan Saidov",
+    "aslanRole": "EBRW & Individual English Teacher — Asliddin Edu Centre",
+    "aslanBio": "Aslan teaches SAT EBRW and Individual English with a personalized approach tailored to each student, focusing on the strategies needed to build real results in English and reading comprehension."
   },
   "courses": {
     "title": "Courses — SAT Math Prep | Asliddin Edu Centre",
@@ -91,7 +94,7 @@
       "description": "A Math-only track built for teachers preparing to raise their score on the national certification exam.",
       "duration": "~2 months, varies by starting level"
     },
-    "resultsHeadline": "Real scores. Real acceptances.",
+    "resultsHeadline": "Student Results",
     "resultsFilterMath": "Only Math",
     "resultsFilterBoth": "EBRW & Math",
     "resultsEmpty": "No results yet — coming soon.",

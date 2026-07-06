@@ -30,7 +30,7 @@
     "whySatLink": "Kurs tafsilotlari →",
     "whySatUrl": "https://infoedu.uz/sat-1200-olganlar-qanday-talaba-boladi",
     "courseTeaserHeading": "Kurs yo‘nalishlari",
-    "resultsHeadline": "Haqiqiy natijalar. Haqiqiy qabul.",
+    "resultsHeadline": "O'quvchilar natijalari",
     "resultsLink": "Barcha natijalar →",
     "ctaHeadline": "Qayerda turganingizni bilishga tayyormisiz?",
     "ctaTelegram": "Telegram orqali yozing",
@@ -49,7 +49,10 @@
     "credentialExperience": "4 yil Math va SAT o‘qituvchisi",
     "ebrwHeading": "Ingliz tili yo‘nalishi",
     "ebrwDescription": "SAT EBRW va Individual English darslarini Aslan Saidov olib boradi.",
-    "ebrwCta": "Telegram orqali yozing"
+    "ebrwCta": "Telegram orqali yozing",
+    "aslanName": "Aslan Saidov",
+    "aslanRole": "EBRW va Individual English o'qituvchisi — Asliddin Edu Centre",
+    "aslanBio": "Aslan Saidov SAT EBRW va Individual English yo'nalishlarida o'quvchilarga individual yondashuv asosida dars beradi. Ingliz tili va o'qish-ko'nikma qismlarida natijaga erishish uchun kerakli strategiyalarni o'rgatadi."
   },
   "courses": {
     "title": "Kurslar — SAT Math Tayyorlov | Asliddin Edu Centre",
@@ -91,7 +94,7 @@
       "description": "Milliy attestatsiya imtihonida ballini oshirishga tayyorlanayotgan o‘qituvchilar uchun faqat Math-ga yo‘naltirilgan kurs.",
       "duration": "~2 oy, boshlang‘ich darajaga qarab"
     },
-    "resultsHeadline": "Haqiqiy natijalar. Haqiqiy qabul.",
+    "resultsHeadline": "O'quvchilar natijalari",
     "resultsFilterMath": "Faqat Math",
     "resultsFilterBoth": "EBRW va Math",
     "resultsEmpty": "Hozircha natijalar yo‘q — tez orada qo‘shiladi.",

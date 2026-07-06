@@ -23,7 +23,13 @@ export async function fetchStudentResults(): Promise<StudentResult[]> {
   try {
     const res = await fetch(CSV_URL, { next: { revalidate: 300 } });
     const csvText = await res.text();
-    const parsed = Papa.parse<string[]>(csvText, {
+
+    const trimmed = csvText.trim();
+    if (!trimmed || trimmed.startsWith("<") || trimmed.startsWith("<!DOCTYPE")) {
+      return [];
+    }
+
+    const parsed = Papa.parse<string[]>(trimmed, {
       header: false,
       skipEmptyLines: true,
     });

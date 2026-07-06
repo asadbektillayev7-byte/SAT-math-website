@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroPortrait({ className = "" }: { className?: string }) {
   return (
-    <div className={`relative rounded-2xl overflow-hidden ${className}`}>
+    <div className={`relative rounded-2xl overflow-hidden bg-ink/10 ${className}`}>
       <Image
         src="/team/davronbek-portrait.png"
         alt="Davronbek Namozov — SAT Math Mentor"
