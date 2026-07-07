@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslation } from "@/components/i18n-provider";
 import Image from "next/image";
+import TiltCard from "@/components/tilt-card";
 import type { StudentResult } from "@/lib/sheets";
 
 type Props = {
@@ -58,8 +59,9 @@ export default function ResultsGridClient({ results }: Props) {
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((r, i) => (
-            <a
+            <TiltCard
               key={i}
+              as="a"
               href={r.telegram_post}
               target="_blank"
               rel="noopener noreferrer"
@@ -88,7 +90,7 @@ export default function ResultsGridClient({ results }: Props) {
                   {r.score}
                 </p>
               </div>
-            </a>
+            </TiltCard>
           ))}
         </div>
       )}

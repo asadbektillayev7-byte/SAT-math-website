@@ -23,6 +23,9 @@
       "experience": "4 yil — Math va SAT o'qituvchisi",
       "certificate": "77.64 (A+) — Milliy Matematika Sertifikati"
     },
+    "statScoreLabel": "Shaxsiy SAT Math ko'rsatkichi",
+    "statExperienceLabel": "Math va SAT o'qituvchisi",
+    "statCertificateLabel": "Milliy Matematika Sertifikati",
     "aboutTeaser": "790/800 shaxsiy SAT Math ko'rsatkichi va A+ darajasidagi Milliy Matematika Sertifikati ortida bitta g‘oya bor — matematikadan qo‘rqish odatda qobiliyatsizlik emas, bu bosim ostida tezlik muammosi va buni mashq qildirish mumkin.",
     "aboutLink": "Davronbek haqida batafsil →",
     "whySatHeadline": "SAT faqat xorijda o‘qish uchun emas.",

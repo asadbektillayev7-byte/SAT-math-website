@@ -4,6 +4,9 @@ import { Send } from "lucide-react";
 import HandDrawnStat from "@/components/hand-drawn-stat";
 import HeroPortrait from "@/components/hero-portrait";
 import StudentResults from "@/components/student-results";
+import DriftingSymbols from "@/components/drifting-symbols";
+import CountUp from "@/components/count-up";
+import MagneticAnchor from "@/components/magnetic-anchor";
 import { getTranslation, getRawMessage } from "@/lib/translations";
 
 type Props = {
@@ -26,8 +29,9 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative">
-        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <section className="relative overflow-hidden">
+        <DriftingSymbols />
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 relative z-10">
           <div className="grid gap-12 md:grid-cols-5 items-center">
             <div className="md:col-span-3">
               <p className="font-mono text-xs tracking-[0.2em] uppercase text-rust mb-4">
@@ -40,7 +44,7 @@ export default async function HomePage({ params }: Props) {
                 {t("home.heroSubheadline")}
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <a
+                <MagneticAnchor
                   href="https://t.me/VIP_Teacher007?text=Assalomu%20alaykum!%20Men%20birinchi%20darsga%20yozilmoqchiman"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -48,10 +52,10 @@ export default async function HomePage({ params }: Props) {
                 >
                   <Send size={16} />
                   {t("home.heroCta")}
-                </a>
+                </MagneticAnchor>
                 <Link
                   href={`/${locale}/courses`}
-                  className="font-body text-sm text-ink/50 hover:text-ink underline underline-offset-4 transition-colors"
+                  className="underline-sweep font-body text-sm text-ink/50 hover:text-ink transition-colors"
                 >
                   {t("home.heroSecondaryCta")}
                 </Link>
@@ -68,20 +72,23 @@ export default async function HomePage({ params }: Props) {
       <section className="bg-surface border-y border-ink/5">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="grid gap-8 sm:grid-cols-3">
-            <HandDrawnStat className="text-center">
+            <HandDrawnStat className="text-center circle-draw-anim">
               <p className="font-heading text-3xl font-semibold text-ink mb-1">
-                {t("home.stats.score")}
+                <CountUp value={790} suffix="/800" />
               </p>
+              <p className="font-body text-sm text-ink/40">{t("home.statScoreLabel")}</p>
             </HandDrawnStat>
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-ink mb-1">
-                {t("home.stats.experience")}
+                <CountUp value={4} suffix=" years" />
               </p>
+              <p className="font-body text-sm text-ink/40">{t("home.statExperienceLabel")}</p>
             </div>
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-ink mb-1">
-                {t("home.stats.certificate")}
+                <CountUp value={77.64} suffix=" (A+)" decimals={2} />
               </p>
+              <p className="font-body text-sm text-ink/40">{t("home.statCertificateLabel")}</p>
             </div>
           </div>
         </div>
@@ -95,7 +102,7 @@ export default async function HomePage({ params }: Props) {
           </p>
           <Link
             href={`/${locale}/teachers`}
-            className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
+            className="underline-sweep font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
           >
             {t("home.aboutLink")}
           </Link>
@@ -115,7 +122,7 @@ export default async function HomePage({ params }: Props) {
         </p>
         <Link
           href={`/${locale}/courses`}
-          className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
+          className="underline-sweep font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
         >
           {t("home.whySatLink")}
         </Link>
@@ -174,7 +181,7 @@ export default async function HomePage({ params }: Props) {
         <div className="mt-8">
           <Link
             href={`/${locale}/results`}
-            className="font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
+            className="underline-sweep font-mono text-xs tracking-wider uppercase text-gold hover:text-ink transition-colors"
           >
             {t("home.resultsLink")}
           </Link>
@@ -188,7 +195,7 @@ export default async function HomePage({ params }: Props) {
             {t("home.ctaHeadline")}
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
+            <MagneticAnchor
               href="https://t.me/VIP_Teacher007?text=Assalomu%20alaykum!%20Men%20birinchi%20darsga%20yozilmoqchiman"
               target="_blank"
               rel="noopener noreferrer"
@@ -196,7 +203,7 @@ export default async function HomePage({ params }: Props) {
             >
               <Send size={16} />
               {t("home.ctaTelegram")}
-            </a>
+            </MagneticAnchor>
             <Link
               href={`/${locale}/courses`}
               className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg border border-current text-bg hover:text-gold transition-colors"

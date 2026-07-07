@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Send } from "lucide-react";
 import HandDrawnStat from "@/components/hand-drawn-stat";
 import HeroPortrait from "@/components/hero-portrait";
+import CountUp from "@/components/count-up";
 import { getTranslation } from "@/lib/translations";
 
 type Props = {
@@ -36,17 +37,23 @@ export default async function TeachersPage({ params }: Props) {
             </h1>
             <p className="font-body text-lg text-ink/50 mb-8">{t("teachers.role")}</p>
             <div className="grid gap-4 sm:grid-cols-3 mb-10">
-              <HandDrawnStat>
+              <HandDrawnStat className="circle-draw-anim">
                 <p className="font-mono text-sm text-ink/40">Score</p>
-                <p className="font-heading text-2xl font-semibold text-ink">790/800</p>
+                <p className="font-heading text-2xl font-semibold text-ink">
+                  <CountUp value={790} suffix="/800" />
+                </p>
               </HandDrawnStat>
               <div>
                 <p className="font-mono text-sm text-ink/40">Experience</p>
-                <p className="font-heading text-2xl font-semibold text-ink">4 years</p>
+                <p className="font-heading text-2xl font-semibold text-ink">
+                  <CountUp value={4} suffix=" years" />
+                </p>
               </div>
               <div>
                 <p className="font-mono text-sm text-ink/40">Certificate</p>
-                <p className="font-heading text-2xl font-semibold text-ink">77.64 (A+)</p>
+                <p className="font-heading text-2xl font-semibold text-ink">
+                  <CountUp value={77.64} suffix=" (A+)" decimals={2} />
+                </p>
               </div>
             </div>
           </div>

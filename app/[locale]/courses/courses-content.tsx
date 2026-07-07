@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Send, MapPin } from "lucide-react";
 import AudienceToggle from "@/components/audience-toggle";
 import FaqSection from "@/components/faq-section";
+import DriftingSymbols from "@/components/drifting-symbols";
+import TiltCard from "@/components/tilt-card";
+import MagneticAnchor from "@/components/magnetic-anchor";
 import { contacts } from "@/data/contacts";
 
 type Props = {
@@ -28,7 +31,7 @@ export default function CoursesContent({ locale, messages }: Props) {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="font-mono text-[11px] tracking-widest uppercase text-ink/50 hover:text-gold whitespace-nowrap transition-colors"
+              className="underline-sweep font-mono text-[11px] tracking-widest uppercase text-ink/50 hover:text-gold whitespace-nowrap transition-colors"
             >
               {item.label}
             </a>
@@ -37,7 +40,9 @@ export default function CoursesContent({ locale, messages }: Props) {
       </div>
 
       {/* Intro / Why SAT */}
-      <section id="courses-intro" className="max-w-6xl mx-auto px-6 py-20">
+      <section id="courses-intro" className="max-w-6xl mx-auto px-6 py-20 relative overflow-hidden">
+        <DriftingSymbols />
+        <div className="relative z-10">
         <h1 className="font-heading text-3xl md:text-4xl font-semibold text-ink mb-8">
           {messages.introHeading}
         </h1>
@@ -82,6 +87,7 @@ export default function CoursesContent({ locale, messages }: Props) {
             </div>
           )}
         </div>
+        </div>
       </section>
 
       {/* Torn divider */}
@@ -96,7 +102,7 @@ export default function CoursesContent({ locale, messages }: Props) {
         {audience === "students" ? (
           <>
             <div className="grid gap-6 md:grid-cols-3 mb-10">
-              <div
+              <TiltCard
                 id="sat-advanced"
                 className="bg-surface rounded-xl border border-ink/5 p-6"
               >
@@ -114,9 +120,9 @@ export default function CoursesContent({ locale, messages }: Props) {
                   <p>Group size: 15</p>
                   <p>Mon–Sat regular lessons + Sunday mock tests</p>
                 </div>
-              </div>
+              </TiltCard>
 
-              <div
+              <TiltCard
                 id="pre-sat"
                 className="bg-surface rounded-xl border border-ink/5 p-6"
               >
@@ -134,9 +140,9 @@ export default function CoursesContent({ locale, messages }: Props) {
                   <p>Group size: 15</p>
                   <p>Mon–Sat regular lessons + Sunday mock tests</p>
                 </div>
-              </div>
+              </TiltCard>
 
-              <div
+              <TiltCard
                 id="individual-english"
                 className="bg-surface rounded-xl border border-ink/5 p-6"
               >
@@ -153,7 +159,7 @@ export default function CoursesContent({ locale, messages }: Props) {
                   <p>Duration: {messages.individualEnglishDuration}</p>
                   <p>Format: individual/personalized</p>
                 </div>
-              </div>
+              </TiltCard>
             </div>
 
             {/* Pricing */}
@@ -171,7 +177,7 @@ export default function CoursesContent({ locale, messages }: Props) {
 
             {/* Book your first lesson */}
             <div className="mt-8">
-              <a
+              <MagneticAnchor
                 href="https://t.me/VIP_Teacher007?text=Assalomu%20alaykum!%20Men%20birinchi%20darsga%20yozilmoqchiman"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -179,11 +185,11 @@ export default function CoursesContent({ locale, messages }: Props) {
               >
                 <Send size={16} />
                 {messages.bookLesson}
-              </a>
+              </MagneticAnchor>
             </div>
           </>
         ) : (
-          <div
+          <TiltCard
             id="teachers-math"
             className="max-w-lg bg-surface rounded-xl border border-ink/5 p-6"
           >
@@ -203,7 +209,7 @@ export default function CoursesContent({ locale, messages }: Props) {
               <p>Group size: 10</p>
               <p className="text-gold font-semibold">350,000 UZS / month</p>
             </div>
-          </div>
+          </TiltCard>
         )}
       </section>
 

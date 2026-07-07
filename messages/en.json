@@ -23,6 +23,9 @@
       "experience": "4 years — Teaching Math & SAT",
       "certificate": "77.64 (A+) — National Math Certificate score"
     },
+    "statScoreLabel": "Personal SAT Math score",
+    "statExperienceLabel": "Teaching Math & SAT",
+    "statCertificateLabel": "National Math Certificate score",
     "aboutTeaser": "A 790/800 personal SAT Math score and a National Math Certificate at A+ level back a teaching style built on one idea — math anxiety usually isn't about ability, it's about speed under pressure, and that's trainable.",
     "aboutLink": "More about Davronbek →",
     "whySatHeadline": "The SAT isn't just for admission abroad.",
