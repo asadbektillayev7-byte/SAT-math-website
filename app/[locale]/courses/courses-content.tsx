@@ -124,9 +124,9 @@ export default function CoursesContent({ locale, messages }: Props) {
                   {messages.satAdvancedDesc}
                 </p>
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
-                  <p>Duration: {messages.satAdvancedDuration}</p>
-                  <p>Group size: 15</p>
-                  <p>Mon–Sat regular lessons + Sunday mock tests</p>
+                  <p>{messages.durationLabel}: {messages.satAdvancedDuration}</p>
+                  <p>{messages.groupSizeLabel}: 15</p>
+                  <p>{messages.scheduleLine}</p>
                 </div>
               </TiltCard>
 
@@ -144,9 +144,9 @@ export default function CoursesContent({ locale, messages }: Props) {
                   {messages.preSatDesc}
                 </p>
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
-                  <p>Duration: {messages.preSatDuration}</p>
-                  <p>Group size: 15</p>
-                  <p>Mon–Sat regular lessons + Sunday mock tests</p>
+                  <p>{messages.durationLabel}: {messages.preSatDuration}</p>
+                  <p>{messages.groupSizeLabel}: 15</p>
+                  <p>{messages.scheduleLine}</p>
                 </div>
               </TiltCard>
 
@@ -164,8 +164,9 @@ export default function CoursesContent({ locale, messages }: Props) {
                   {messages.individualEnglishDesc}
                 </p>
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
-                  <p>Duration: {messages.individualEnglishDuration}</p>
-                  <p>Format: individual/personalized</p>
+                  <p>{messages.durationLabel}: {messages.individualEnglishDuration}</p>
+                  <p>{messages.groupSizeLabel}: 15</p>
+                  <p>{messages.scheduleLine}</p>
                 </div>
               </TiltCard>
             </div>
@@ -211,14 +212,14 @@ export default function CoursesContent({ locale, messages }: Props) {
               {messages.teachersMathDesc}
             </p>
             <div className="space-y-1.5 font-mono text-xs text-ink/40">
-              <p>Duration: {messages.teachersMathDuration}</p>
-              <p>Mon–Sat regular lessons + Sunday mock tests</p>
-              <p>Session: 2–2.5 hours</p>
-              <p>Group size: 10</p>
+              <p>{messages.durationLabel}: {messages.teachersMathDuration}</p>
+              <p>{messages.scheduleLine}</p>
+              <p>{messages.sessionLengthLabel}: 2–2.5 hours</p>
+              <p>{messages.groupSizeLabel}: 10</p>
               <p className="text-gold font-semibold">350,000 UZS / month</p>
             </div>
           </TiltCard>
-                )}
+        )}
       </section>
       </Reveal>
 
