@@ -45,9 +45,9 @@
     "philosophy2": "SAT Math o‘qitgan to‘rt yil davomida asosan bitta naqshni ko‘rdim: \"matematik odam emas\" degan o‘quvchilar deyarli har doim tenglamadan vaqtni chiqarib olishni o‘rganmagan o‘quvchilar bo‘lib chiqadi. Tezlik — bu nazariyadan emas, real imtihon sharoitida takrorlashdan keladi. Butun metod shu.",
     "credentialsHeading": "Sertifikatlar",
     "credentialScore": "Shaxsiy SAT Math ko‘rsatkichi: 790/800",
-    "credentialCertificate": "Milliy Matematika Sertifikati: 77.64 — A+",
+    "credentialCertificate": "Matematika Milliy Sertifikati: 77.64/100 (A+)",
     "credentialExperience": "4 yil Math va SAT o‘qituvchisi",
-    "ebrwHeading": "Ingliz tili yo‘nalishi",
+    "ebrwHeading": "Ingliz tili ustozi",
     "ebrwDescription": "SAT EBRW va Individual English darslarini Aslan Saidov olib boradi.",
     "ebrwCta": "Telegram orqali yozing",
     "aslanName": "Aslan Saidov",
@@ -106,7 +106,7 @@
       },
       {
         "q": "Haftalik jadval qanday?",
-        "a": "Dushanba–Juma oddiy darslar, Shanba kuni to‘liq mock-test amaliyoti — barcha yo‘nalishlarda haftada 6 kun."
+        "a": "Dushanba–Shanba: asosiy darslar. Yakshanba: mock testlar va zaif tomonlar ustida ishlash uchun qo'shimcha darslar."
       },
       {
         "q": "Har bir kurs qancha davom etadi?",

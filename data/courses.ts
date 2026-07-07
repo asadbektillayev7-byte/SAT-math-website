@@ -53,7 +53,7 @@ export const courses: Course[] = [
     titleKey: "courses.teachersMath.title",
     descriptionKey: "courses.teachersMath.description",
     duration: "courses.teachersMath.duration",
-    schedule: "Mon–Fri regular lessons + Saturday mock-test practice, 6 days/week",
+    schedule: "Mon–Sat regular lessons + Sunday mock tests",
     sessionLength: "2–2.5 hours",
     groupSize: "10",
     price: "350,000 UZS / month",

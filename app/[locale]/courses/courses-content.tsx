@@ -112,7 +112,7 @@ export default function CoursesContent({ locale, messages }: Props) {
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
                   <p>Duration: {messages.satAdvancedDuration}</p>
                   <p>Group size: 15</p>
-                  <p>Mon–Fri + Sat mock tests</p>
+                  <p>Mon–Sat regular lessons + Sunday mock tests</p>
                 </div>
               </div>
 
@@ -132,7 +132,7 @@ export default function CoursesContent({ locale, messages }: Props) {
                 <div className="space-y-1.5 font-mono text-xs text-ink/40">
                   <p>Duration: {messages.preSatDuration}</p>
                   <p>Group size: 15</p>
-                  <p>Mon–Fri + Sat mock tests</p>
+                  <p>Mon–Sat regular lessons + Sunday mock tests</p>
                 </div>
               </div>
 
@@ -185,7 +185,7 @@ export default function CoursesContent({ locale, messages }: Props) {
             </p>
             <div className="space-y-1.5 font-mono text-xs text-ink/40">
               <p>Duration: {messages.teachersMathDuration}</p>
-              <p>Mon–Fri regular lessons + Saturday mock-test practice, 6 days/week</p>
+              <p>Mon–Sat regular lessons + Sunday mock tests</p>
               <p>Session: 2–2.5 hours</p>
               <p>Group size: 10</p>
               <p className="text-gold font-semibold">350,000 UZS / month</p>
