@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -17,20 +17,20 @@ export default function Reveal({
   delay = 0,
   direction = "up",
 }: Props) {
+  const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.classList.add("reveal-visible");
+      setVisible(true);
       return;
     }
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (delay) el.style.transitionDelay = `${delay}ms`;
-          el.classList.add("reveal-visible");
+          setVisible(true);
           obs.disconnect();
         }
       },
@@ -43,7 +43,8 @@ export default function Reveal({
   return (
     <Tag
       ref={ref as never}
-      className={`reveal reveal-${direction} ${className}`}
+      style={delay && visible ? { transitionDelay: `${delay}ms` } : undefined}
+      className={`reveal reveal-${direction} ${visible ? "reveal-visible" : ""} ${className}`}
     >
       {children}
     </Tag>
