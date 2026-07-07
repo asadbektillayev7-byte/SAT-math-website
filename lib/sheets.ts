@@ -43,7 +43,11 @@ export async function fetchStudentResults(): Promise<StudentResult[]> {
         name: row[0]?.trim() || "",
         photo: normalizeDriveUrl(row[1]?.trim() || ""),
         category: (row[2]?.trim() === "ebrw_math" ? "ebrw_math" : "math") as StudentResult["category"],
-        score: (row[3]?.trim() || "").replace(/\/\d+$/, "") + "/1600",
+        score: (() => {
+          const raw = (row[3]?.trim() || "").replace(/\/\d+$/, "");
+          const num = parseInt(raw, 10);
+          return isNaN(num) ? raw : num >= 1200 ? raw + "/1600" : raw + "/800";
+        })(),
         telegram_post: row[4]?.trim() || "",
       }))
       .filter((r) => r.name && r.score);
