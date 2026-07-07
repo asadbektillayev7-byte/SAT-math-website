@@ -41,7 +41,7 @@ export default async function HomePage({ params }: Props) {
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="https://t.me/VIP_Teacher007"
+                  href="https://t.me/VIP_Teacher007?text=Assalomu%20alaykum!%20Men%20birinchi%20darsga%20yozilmoqchiman"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"
@@ -189,7 +189,7 @@ export default async function HomePage({ params }: Props) {
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://t.me/VIP_Teacher007"
+              href="https://t.me/VIP_Teacher007?text=Assalomu%20alaykum!%20Men%20birinchi%20darsga%20yozilmoqchiman"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"

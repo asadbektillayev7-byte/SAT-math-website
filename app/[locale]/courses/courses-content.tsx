@@ -168,6 +168,19 @@ export default function CoursesContent({ locale, messages }: Props) {
                 {messages.pricingNote}
               </p>
             </div>
+
+            {/* Book your first lesson */}
+            <div className="mt-8">
+              <a
+                href="https://t.me/VIP_Teacher007?text=Assalomu%20alaykum!%20Men%20birinchi%20darsga%20yozilmoqchiman"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase px-6 py-3 rounded-lg bg-gold text-ink hover:bg-gold/80 transition-colors"
+              >
+                <Send size={16} />
+                {messages.bookLesson}
+              </a>
+            </div>
           </>
         ) : (
           <div

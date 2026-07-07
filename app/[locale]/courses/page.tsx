@@ -53,6 +53,7 @@ export default async function CoursesPage({ params }: Props) {
     contactTelegram: t("courses.contactTelegram"),
     locationConfirmNote: t("courses.locationConfirmNote"),
     openInMaps: t("courses.openInMaps"),
+    bookLesson: t("home.heroCta"),
   };
 
   return <CoursesContent locale={locale} messages={messages} />;
