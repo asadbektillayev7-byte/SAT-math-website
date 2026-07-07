@@ -150,10 +150,38 @@ body {
   width: 100%;
 }
 
+/* Scroll-reveal entrance animations */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-up { transform: translateY(24px); }
+.reveal-left { transform: translateX(-30px); }
+.reveal-right { transform: translateX(30px); }
+.reveal-none { transform: none; }
+.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger cascade for grid children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-stagger > *.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .symbol-drift { animation: none !important; opacity: 0.08; }
   .circle-draw-anim svg ellipse { stroke-dashoffset: 0 !important; animation: none !important; }
   [data-tilt] { transform: none !important; transition: none !important; }
   [data-magnetic] { transform: none !important; transition: none !important; }
+  .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
 }

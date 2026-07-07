@@ -8,6 +8,7 @@ import FaqSection from "@/components/faq-section";
 import DriftingSymbols from "@/components/drifting-symbols";
 import TiltCard from "@/components/tilt-card";
 import MagneticAnchor from "@/components/magnetic-anchor";
+import Reveal from "@/components/reveal";
 import { contacts } from "@/data/contacts";
 
 type Props = {
@@ -43,17 +44,22 @@ export default function CoursesContent({ locale, messages }: Props) {
       <section id="courses-intro" className="max-w-6xl mx-auto px-6 py-20 relative overflow-hidden">
         <DriftingSymbols />
         <div className="relative z-10">
+        <Reveal delay={0}>
         <h1 className="font-heading text-3xl md:text-4xl font-semibold text-ink mb-8">
           {messages.introHeading}
         </h1>
+        </Reveal>
 
+        <Reveal delay={100}>
         <AudienceToggle
           active={audience}
           onChange={setAudience}
           studentLabel={messages.audienceStudents}
           teacherLabel={messages.audienceTeachers}
         />
+        </Reveal>
 
+        <Reveal delay={200}>
         <div className="mt-10 max-w-3xl">
           {audience === "students" ? (
             <div>
@@ -87,6 +93,7 @@ export default function CoursesContent({ locale, messages }: Props) {
             </div>
           )}
         </div>
+        </Reveal>
         </div>
       </section>
 
@@ -94,6 +101,7 @@ export default function CoursesContent({ locale, messages }: Props) {
       <div className="torn-divider" />
 
       {/* Course cards */}
+      <Reveal>
       <section className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
           {messages.coursesHeading}
@@ -101,7 +109,7 @@ export default function CoursesContent({ locale, messages }: Props) {
 
         {audience === "students" ? (
           <>
-            <div className="grid gap-6 md:grid-cols-3 mb-10">
+            <div className="reveal-stagger grid gap-6 md:grid-cols-3 mb-10">
               <TiltCard
                 id="sat-advanced"
                 className="bg-surface rounded-xl border border-ink/5 p-6"
@@ -210,29 +218,34 @@ export default function CoursesContent({ locale, messages }: Props) {
               <p className="text-gold font-semibold">350,000 UZS / month</p>
             </div>
           </TiltCard>
-        )}
+                )}
       </section>
+      </Reveal>
 
       {/* FAQ */}
-      <section id="faq" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
-          {messages.faqHeading}
-        </h2>
-        <div className="max-w-2xl">
-          <FaqSection />
-        </div>
-      </section>
+      <Reveal>
+        <section id="faq" className="max-w-6xl mx-auto px-6 py-20">
+          <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
+            {messages.faqHeading}
+          </h2>
+          <div className="max-w-2xl">
+            <FaqSection />
+          </div>
+        </section>
+      </Reveal>
 
       {/* Torn divider */}
       <div className="torn-divider" />
 
       {/* Contact */}
-      <section id="contact" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
-          {messages.contactHeading}
-        </h2>
-        <ContactSectionContent messages={messages} />
-      </section>
+      <Reveal>
+        <section id="contact" className="max-w-6xl mx-auto px-6 py-20">
+          <h2 className="font-heading text-2xl font-semibold text-ink mb-8">
+            {messages.contactHeading}
+          </h2>
+          <ContactSectionContent messages={messages} />
+        </section>
+      </Reveal>
     </>
   );
 }

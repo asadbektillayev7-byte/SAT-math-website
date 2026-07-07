@@ -17,7 +17,7 @@ export function normalizeDriveUrl(shareUrl: string): string {
 }
 
 const CSV_URL =
-  "https://docs.google.com/spreadsheets/d/1W8EL1c4ISCVqGxQQS8UnoebpObPkFyGt587a94OuH9c/export?format=csv";
+  "https://docs.google.com/spreadsheets/d/1W8EL1c4ISCVqGxQQS8UnoebpObPkFyGt587a94OuH9c/gviz/tq?tqx=out:csv";
 
 export async function fetchStudentResults(): Promise<StudentResult[]> {
   try {
